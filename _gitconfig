@@ -1,0 +1,13 @@
+[user]
+	name = NAME
+	email = EMAIL
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[alias]
+        st = status -s
+        cm = commit -m
+        mg = merge --no-ff
+        lg = log --oneline --graph --decorate
