@@ -11,3 +11,7 @@
         cm = commit -m
         mg = merge --no-ff
         lg = log --oneline --graph --decorate
+        co = checkout
+        ft = fetch
+        rs = reset --soft
+        rh = reset --hard
