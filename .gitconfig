@@ -1,17 +1,38 @@
 [user]
-	name = NAME
-	email = EMAIL
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+  name = NAME
+  email = EMAIL
+
 [alias]
-        st = status -s
-        cm = commit -m
-        mg = merge --no-ff
-        lg = log --oneline --graph --decorate
-        co = checkout
-        ft = fetch
-        rs = reset --soft
-        rh = reset --hard
+  s = status -sb
+
+  co  = checkout
+  cob = checkout -b
+  cop = checkout -p
+
+  f = fetch
+
+  cm = commit -m
+  mg = merge --no-ff
+
+  rsh = reset --soft HEAD^
+  rso = reset --soft
+  rha = reset --hard
+
+  ls = log --stat
+  lp = log -p
+  la = log --pretty=\"format:%ad %h (%an): %s\" --date=short
+  lo = log origin
+  l1 = log --pretty=oneline
+  lr = shortlog -s -n --no-merges
+  search = log --grep
+
+  cp = cherry-pick
+
+  ha  = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+  h   = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+  h1  = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s' -1
+  h3  = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s' -3
+  h5  = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s' -5
+  h10 = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s' -10
+  h20 = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s' -20
+
