@@ -1,5 +1,5 @@
-"dein Scripts-----------------------------
-
+"-----dein.vim------
+" https://github.com/Shougo/dein.vim
 if &compatible
   set nocompatible               " Be iMproved
 endif
@@ -36,22 +36,42 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
+"------------------
 
-"End dein Scripts-------------------------
 
-" nerdtree
+"-----NERDTree-----
+" https://github.com/preservim/nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-y> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
-autocmd VimEnter * execute 'NERDTree'
+" Start NERDTree. If a file is specified, move the cursor to its window.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+"------------------
 
-" airline
+
+"-----airline-----
+" https://github.com/vim-airline/vim-airline
 let g:airline#extensions#tabline#enabled = 1
-nnoremap <silent> , :bprev<CR>
-nnoremap <silent> . :bnext<CR>
-nnoremap bd :bd<CR>
+let g:airline#extensions#tabline#buffer_idx_mode = 1 
+let g:airline#extensions#tabline#buffer_idx_format = {
+  \ '0': '0 ',
+  \ '1': '1 ',
+  \ '2': '2 ',
+  \ '3': '3 ',
+  \ '4': '4 ',
+  \ '5': '5 ',
+  \ '6': '6 ',
+  \ '7': '7 ',
+  \ '8': '8 ',
+  \ '9': '9 '
+\}
+nmap <C-p> <Plug>AirlineSelectPrevTab
+nmap <C-n> <Plug>AirlineSelectNextTab
+"-----------------
+
 
 syntax enable
-
+set nu
