@@ -2,13 +2,13 @@
 
 # Move dotfiles
 mv {_,~/.}gitconfig
-ln -s ~/.gitconfig ./_gitconfig
+ln ~/.gitconfig ./_gitconfig
 
 mv {_,~/.}tmux.conf
-ln -s ~/.tmux.conf ./_tmux.conf
+ln ~/.tmux.conf ./_tmux.conf
 
 mv {_,~/.}vimrc
-ln -s ~/.vimrc ./_vimrc
+ln ~/.vimrc ./_vimrc
 
 # Install dein.vim
 # https://github.com/Shougo/dein.vim
