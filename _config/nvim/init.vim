@@ -25,6 +25,10 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "
+" Using NERDTree
+" - https://github.com/preservim/nerdtree
+Plug 'preservim/nerdtree'
+"
 " ================================
 "
 " Initialize plugin system
