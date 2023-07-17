@@ -5,7 +5,7 @@
 ### 01. Clone repository
 
 ```
-$ git clone git@github.com:faultier92/dotfiles.git
+$ git clone git@github.com:eisyos/dotfiles.git
 ```
 
 ### 02. Change directory
