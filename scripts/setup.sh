@@ -3,6 +3,7 @@
 # Move dotfiles
 mv {_,~/.}bashrc
 ln ~/.bashrc ./_bashrc
+source ~/.bashrc
 
 mv {_,~/.}gitconfig
 ln ~/.gitconfig ./_gitconfig
