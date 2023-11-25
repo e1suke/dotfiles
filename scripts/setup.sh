@@ -1,8 +1,8 @@
 #! /bin/bash
 
 # Move dotfiles
-mv {_,~/.}zshrc
-ln ~/.zshrc ./_zshrc
+mv {_,~/.}bashrc
+ln ~/.bashrc ./_bashrc
 
 mv {_,~/.}gitconfig
 ln ~/.gitconfig ./_gitconfig
