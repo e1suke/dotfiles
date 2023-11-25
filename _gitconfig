@@ -1,6 +1,9 @@
 [user]
-  name = NAME
-  email = EMAIL
+  name = "Eisuke Yoshida"
+  email = "ekusie.yeongjo@outlook.com"
+
+[core]
+  editor = vim
 
 [alias]
   s = status -sb

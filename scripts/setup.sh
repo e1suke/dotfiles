@@ -15,7 +15,7 @@ ln ~/.config/nvim/init.vim ./_config/nvim/init.vim
 
 # Install vim-plug
 # https://github.com/junegunn/vim-plug
-# For vim
+# For neovim
 # curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 #   "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 # For neovim
